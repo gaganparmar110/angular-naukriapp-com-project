@@ -1,0 +1,60 @@
+
+<div class="container">
+    <h1>Register with us!</h1>
+  <form [formGroup]="userRegisterFormGroup"  (ngSubmit)="onSubmit()">
+
+  <div class="row"> 
+    <div class="col-mg-6">
+     <label>Name:</label>
+     <input type="text" formControlName="name" /><br>
+      <span class="text-danger" *ngIf="(registerFormControl.name.touched || submitted) && registerFormControl.name.errors?.required">
+                                Name is required!!
+                            </span>
+                            
+                            
+                            <br/> 
+   
+      <label>EmailId:</label>
+     <input type="text" formControlName="email"/><br>
+      <span class="text-danger" *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
+                                Email is required!!
+                            </span>
+                             <span class="text-danger"
+                                *ngIf="registerFormControl.email.touched && registerFormControl.email.errors?.email">
+                                Enter a valid email address
+                            </span><br/>
+      <label>Create Password:</label>
+     <input type="password" formControlName="password"/><br>
+
+      <span class="text-danger" *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
+                                Password is required!!
+                            </span><br/>
+                             <span class="text-danger"
+                                *ngIf="registerFormControl.password.touched && registerFormControl.password.errors?.minlength">
+                                Enter a valid password of 8 digits
+                            </span><br/>
+      <label>Mobile Number:</label>
+     <input type="number" formControlName="mobile"/><br>
+      <span class="text-danger" *ngIf="(registerFormControl.mobile.touched || submitted) && registerFormControl.mobile.errors?.required">
+                                Mobile Number is required!!
+                            </span><br/>
+                             <span class="text-danger"
+                                *ngIf="registerFormControl.password.touched && registerFormControl.password.errors?.maxlength">
+                                Enter a valid mobile number
+                            </span><br/>
+      <label>Current Location:</label>
+     <input type="text" formControlName="location"/><br>
+      <span class="text-danger" *ngIf="(registerFormControl.location.touched || submitted) && registerFormControl.location.errors?.required">
+                                Current Location is required!!
+                            </span><br/>
+     <label>Upload Resume:</label>
+     <input type="file" formControlName="resumeFile"/><br>
+      <span class="text-danger" *ngIf="(registerFormControl.resumeFile.touched || submitted) && registerFormControl.resumeFile.errors?.required">
+                                Resume is required!!
+                            </span><br/>
+     <button class="btn btn-success">Register</button>
+  </div>
+  
+  </div>
+  </form>
+</div>

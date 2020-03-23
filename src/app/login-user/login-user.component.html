@@ -1,0 +1,15 @@
+<div class="container">
+
+  <h1>Login with UserName Or Email</h1>
+  <div class="row">
+    <form [formGroup]="loginUserFormGroup">
+    <div class="col-lg-6">
+            <label>UserName/EmailId</label>
+            <input type="text" formControlName="userName"/><br>
+            <label>Password</label>
+            <input type="password" formControlName="password"/><br>
+            <button class="btn btn-success" (click)="login()">Login</button>
+    </div>
+    </form>
+  </div>
+</div>

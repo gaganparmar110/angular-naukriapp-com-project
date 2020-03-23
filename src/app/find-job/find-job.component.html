@@ -1,0 +1,45 @@
+
+
+
+<div class="container">
+ <div class="row"> 
+ <div class="col-sm-6">
+   <div *ngFor= "let lists of jobarray" style="float:left; margin-right:200px;">
+    <div class="card" style="width:2000px;">
+      
+      <div class="card-body">
+<h4><div *ngIf= "title">{{title}}</div></h4>
+
+
+   
+  <h5>{{lists.Heading}}</h5><br/>
+    <h5>{{lists.SubHeading}}</h5><br/>
+
+  <p><i class="fa fa-map-marker" style="font-size:12px;"> {{lists.City}}</i>&nbsp;&nbsp;
+  <i class="fa fa-rupee" style="font-size:12px;"> Not Disclosed</i></p>
+   <i class="fa fa-bookmark-o" style="font-size:12px;">
+ {{lists.Experience}}
+   {{lists.Type}}
+   </i><br/><br/>
+   <i class="fa fa-tag" style="font-size:12px;">
+   Opening:
+{{lists.Opening}}!!
+   </i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <button type="submit"(click)="check()" class="btn btn-primary">Apply Now!!</button>
+
+  
+  
+
+   <br/>
+   
+  </div>
+  </div>
+</div>
+ </div>
+ </div>
+</div>
+ 
+ 
+
+   
+<router-outlet></router-outlet>

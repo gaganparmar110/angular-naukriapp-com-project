@@ -1,0 +1,29 @@
+
+
+<div class="container">
+    <div class="row">
+        <form [formGroup]="feedbackFormGroup" class="col-md-9 go-right">
+            <h2>Feedback Form</h2>
+            <p>We welcome for your feedback and we will try to implement it into our website.</p>
+            <div class="form-group">
+            <input  type="text"  id="name" class="form-control" formControlName="myName" required>
+            <label>Your Name</label>
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" formControlName="myEmail" required>
+            <label >Email Address</label>
+        </div>
+        <div class="form-group">
+            <input type="number" class="form-control" formControlName="myNumber" required>
+            <label > Phone</label>
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" style="height: 150px"formControlName="myMessage" required></textarea>
+            <label for="message">Message</label>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary" (click)="display()">Submit</button>
+        </div>
+        </form>/
+    </div>
+</div>
